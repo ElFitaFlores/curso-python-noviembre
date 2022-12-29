@@ -13,3 +13,16 @@
 
 # endpoint 
 # response
+# Body 
+# Headers
+# Códigos HTTP - 100 200 300 400
+
+import requests
+
+response = requests.get('https://swapi.dev/api/people', params={'page': 2})
+print(response)
+print(response.status_code)
+#print(response.content)
+print(response.headers)
+data = response.json()
+print(data['results'][0]['name'])
